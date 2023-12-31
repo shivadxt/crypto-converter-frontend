@@ -50,7 +50,7 @@ const Converter = () => {
       <h1>Currency Converter</h1>
       {error && <p>Error: {error}</p>}
       <form onSubmit={e => { e.preventDefault(); handleConversion(); }}>
-      
+      <div style={{paddingBottom:"1rem"}}>
       <label>
           Select Source Cryptocurrency:
           <select onChange={e => setSelectedCrypto(e.target.value)}>
@@ -60,12 +60,16 @@ const Converter = () => {
             ))}
           </select>
         </label>
+        </div>
         <br />
+        <div style={{paddingBottom:"1rem"}}>
         <label>
           Enter Amount:
           <input type="number" value={amount} onChange={e => setAmount(e.target.value)} />
         </label>
+        </div>
         <br/>
+        <div style={{paddingBottom:"1rem"}}>
         <label>
           Select Target Currency:
           <select onChange={e => setTargetCurrency(e.target.value)} defaultValue="usd">
@@ -73,6 +77,7 @@ const Converter = () => {
             <option value="eur">EUR</option>
           </select>
         </label>
+        </div>
         <br />
         <button type="submit">Convert</button>
       </form>
