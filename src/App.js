@@ -20,7 +20,7 @@ const Converter = () => {
         setError(null);
       })
       .catch(error => {
-       
+        setError('Wait we are fetching cryptocurrencies it will take some time :) ');
       });
   };
 
